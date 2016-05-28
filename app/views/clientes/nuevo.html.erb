@@ -1,0 +1,18 @@
+<%= form_for(@clientes) do |f| %>
+  <div> 
+    <h2><%= f.label :cliente %><br></h2> 
+    <p>Nombre: <%= f.text_area(:nombre, size: "30x1") %></p>
+    <p>CUIT: <%= f.text_area(:cuit, size: "30x1") %></p>
+    <p>Dirección: <%= f.text_area(:direccion, size: "30x1") %></p>
+    <p>Localidad: <%= f.text_area(:localidad, size: "30x1") %></p>
+    <p>Provincia: <%= f.text_area(:provincia, size: "30x1") %></p>
+    <p>Codigo Postal: <%= f.text_area(:codigo_postal, size: "30x1") %></p>
+    <p>Limite Credito: <%= f.number_field(:limite_credito) %></p>
+    <p>Telefono <%= f.telephone_field(:telefono) %></p>
+    <p>Celular: <%= f.telephone_field(:celular) %></p>
+    <p>Email: <%= f.email_field(:email) %></p>  
+  </div> 
+  <div> 
+    <%= f.submit "Guardar" %> 
+  </div> 
+<% end %>

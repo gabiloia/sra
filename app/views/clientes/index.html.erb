@@ -1,0 +1,9 @@
+<% @clientes.each do |cliente| %> 
+<div> 
+  <p>Nombre: <%= cliente.nombre %></p>
+  <p>Apellido: <%= cliente.apellido %></p>
+  <p>---------------------------</p> 
+</div>
+<% end %>
+
+<%= link_to 'Nuevo Cliente', "clientes/nuevo" %>
