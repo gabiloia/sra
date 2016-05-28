@@ -18,20 +18,11 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Clientes</h1>
-	
+    <h1>Hello, world!</h1>
 
-<% @clientes.each do |cliente| %>
-<div>
-  <p>Nombre: <%= cliente.nombre %></p>
-  <%= link_to "Detalles", cliente_path(cliente) %>
-  <p>---------------------------</p>
-</div>
-<% end %>
-
-<%= link_to 'Nuevo Cliente', "clientes/nuevo" %>
-
-
+<%= image_tag @maquina.imagen %>
+        <h2><%= @maquina.modelo %></h2>
+        <p><%= @maquina.descripcion %></p>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

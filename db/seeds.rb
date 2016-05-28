@@ -7,8 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-c1 = Cliente.create(nombre: "Alberto", apellido: "Martinez")
+c1 = Cliente.create(nombre: "Alberto")
 
-c2 = Cliente.create(nombre: "Juan", apellido: "Martinez Abadias")
-
-
+Maquina.create(modelo: "BizHub 423", descripcion: "", imagen: "imagenes/logoReproAndina.gif", cliente_id: c1.id)
+Maquina.create(modelo: "Panasonic 123", descripcion: "white sand beaches", imagen: "imagenes/logoReproAndina.gif", cliente_id: c1.id)

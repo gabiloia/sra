@@ -17,6 +17,11 @@ class ClientesController < ApplicationController
         end
   end
 
+  def show 
+    @cliente = Cliente.find(params[:id]) 
+    @maquinas = @cliente.maquinas
+  end
+
   private
     def cliente_parametros
     
