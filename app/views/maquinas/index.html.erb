@@ -1,0 +1,10 @@
+<p>maquinas</p>
+<% @maquinas.each do |maquina| %>
+<div>
+  <p>num_serie: <%= maquina.num_serie %></p>
+  <%= link_to "Detalles", maquina_path(maquina) %>
+  <p>---------------------------</p>
+</div>
+<% end %>
+
+<%= link_to 'Nueva Maquina', "maquinas/new" %>

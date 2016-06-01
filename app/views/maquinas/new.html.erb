@@ -1,0 +1,23 @@
+<h1>Nueva maquina</h1>
+<%= form_for :maquina do |f| %>
+  <p>
+    <%= f.label :num_serie %><br>
+    <%= f.text_field :num_serie %>
+  </p>
+ 
+  <p>
+    <%= f.label :contador %><br>
+    <%= f.number_field :contador %>
+  </p>
+ 
+  <p>
+  <%= f.label :alquilada %><br>
+  <%= f.radio_button :alquilada, 'true' %>
+
+  </p>
+
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

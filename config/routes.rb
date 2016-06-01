@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get '/clientes/nuevo' => 'clientes#nuevo' 
   post 'clientes' => 'clientes#crear'
   get '/clientes/:id' => 'clientes#show', as: :cliente
+  
+  get '/maquinas' => 'maquinas#index'
+  get '/maquinas/new' => 'maquinas#new'
   get '/maquinas/:id' => 'maquinas#show', as: :maquina
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

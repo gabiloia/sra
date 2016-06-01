@@ -7,9 +7,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,31 +15,67 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Clientes</h1>
 
 
-
+<h1>Nuevo Cliente</h1>
 <%= form_for(@clientes) do |f| %>
   <div>
-    <h2>Nuevo Cliente</h2>
-    <p>Nombre: <%= f.text_area(:nombre, size: "30x1") %></p>
-    <p>CUIT: <%= f.text_area(:cuit, size: "30x1") %></p>
-    <p>Dirección: <%= f.text_area(:direccion, size: "30x1") %></p>
-    <p>Localidad: <%= f.text_area(:localidad, size: "30x1") %></p>
-    <p>Provincia: <%= f.text_area(:provincia, size: "30x1") %></p>
-    <p>Codigo Postal: <%= f.text_area(:codigo_postal, size: "30x1") %></p>
-    <p>Limite Credito: <%= f.number_field(:limite_credito) %></p>
-    <p>Telefono <%= f.telephone_field(:telefono) %></p>
-    <p>Celular: <%= f.telephone_field(:celular) %></p>
-    <p>Email: <%= f.email_field(:email) %></p>
+    <p>
+    <%= f.label :nombre %><br>
+    <%= f.text_field(:nombre) %>
+    </p>
+
+    <p>
+    <%= f.label :cuit %><br>
+    <%= f.text_field(:cuit) %>
+    </p>
+
+    <p>
+    <%= f.label :direccion %><br>
+    <%= f.text_field(:direccion) %>
+    </p>
+
+    <p>
+    <%= f.label :localidad %><br>
+    <%= f.text_field(:localidad) %>
+    </p>
+
+    <p>
+    <%= f.label :provincia %><br>
+    <%= f.text_field(:provincia) %>
+    </p>
+
+    <p>
+    <%= f.label :codigo_postal %><br>
+    <%= f.text_field(:codigo_postal) %>
+    </p>
+    
+    <p>
+    <%= f.label :limite_credito %><br>
+    <%= f.number_field(:limite_credito) %>
+    </p>
+
+    <p>
+    <%= f.label :telefono %><br>
+    <%= f.telephone_field(:telefono) %>
+    </p>
+
+    <p>
+    <%= f.label :celular %><br>
+    <%= f.telephone_field(:celular) %>
+    </p>
+
+    <p>
+    <%= f.label :email %><br>
+    <%= f.email_field(:email) %>
+    </p>
+
   </div>
   <div>
     <%= f.submit "Guardar" %>
   </div>
 <% end %>
 
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
