@@ -25,10 +25,7 @@
 
    <% @maquinas.each do |m| %>
       <div class="card col-xs-4">
-        <%= image_tag m.imagen %>
-        <h2><%= m.modelo %></h2>
-        <p><%= m.descripcion %></p>
-      <%= link_to "Detalles", maquina_path(m) %>
+	<%= link_to "Detalles", maquina_path(m) %>
       </div>
    <% end %>
 
