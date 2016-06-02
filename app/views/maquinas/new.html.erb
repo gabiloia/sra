@@ -1,5 +1,20 @@
 <h1>Nueva maquina</h1>
-<%= form_for :maquina do |f| %>
+<%= form_for :maquina, url: maquinas_path do |f| %>
+
+  <% if @maquina.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@maquina.errors.count, "error") %> prohibited this article from being saved:
+      </h2>
+      <ul>
+        <% @maquina.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
   <p>
     <%= f.label :num_serie %><br>
     <%= f.text_field :num_serie %>

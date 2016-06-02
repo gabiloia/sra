@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  get 'wellcome/index'
+
   get '/clientes' => 'clientes#index'
   get '/clientes/nuevo' => 'clientes#nuevo' 
   post 'clientes' => 'clientes#crear'
@@ -8,12 +10,13 @@ Rails.application.routes.draw do
   
   get '/maquinas' => 'maquinas#index'
   get '/maquinas/new' => 'maquinas#new'
+  post 'maquinas' => 'maquinas#crear'
   get '/maquinas/:id' => 'maquinas#show', as: :maquina
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'wellcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

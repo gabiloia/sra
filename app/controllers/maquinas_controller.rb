@@ -4,10 +4,26 @@ class MaquinasController < ApplicationController
   end
 
   def new
-  
+    @maquina = Maquina.new  
+  end
+
+  def crear
+    @maquina = Maquina.new(maquina_params)
+ 
+    if @maquina.save
+      redirect_to @maquina
+    else
+      render 'new'
+    end
   end
 
   def show
     @maquina = Maquina.find(params[:id])
   end
+ 
+  private
+  def maquina_params
+    params.require(:maquina).permit(:num_serie, :contador,:estado)
+  end
+ 
 end
