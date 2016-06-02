@@ -11,11 +11,12 @@
   </p>
  
   <p>
-  <%= f.label :alquilada %><br>
-  <%= f.radio_button :alquilada, 'true' %>
 
+<%= f.radio_button 'estado', '0' %><%= f.label :estado ,'Stock' %><br />
+<%= f.radio_button 'estado', '1' %><%= f.label :estado ,'Alquilada' %><br />
+<%= f.radio_button 'estado', '2' %><%= f.label :estado ,'Vendida' %><br />
+<%= f.radio_button 'estado', '3' %><%= f.label :estado ,'Scrap' %><br />
   </p>
-
 
   <p>
     <%= f.submit %>

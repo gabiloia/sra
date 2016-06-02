@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160601001405) do
+ActiveRecord::Schema.define(version: 20160602005125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20160601001405) do
     t.integer  "cliente_id"
     t.string   "num_serie"
     t.integer  "contador"
-    t.boolean  "alquilada"
+    t.integer  "estado"
   end
 
   create_table "modelos", force: :cascade do |t|
