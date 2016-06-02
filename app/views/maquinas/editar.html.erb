@@ -1,6 +1,6 @@
-<h1>Nueva maquina</h1>
+<h1>Editar Maquina</h1>
 
-<%= form_for :maquina, url: maquinas_path do |f| %>
+<%= form_for :maquina, url: maquina_path(@maquina), method: :patch do |f| %>
 
   <% if @maquina.errors.any? %>
     <div id="error_explanation">
@@ -37,6 +37,6 @@
   <p>
     <%= f.submit %>
   </p>
-<% end %>
-
+<% end %> 
+ 
 <%= link_to 'Back', maquinas_path %>

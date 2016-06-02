@@ -7,6 +7,11 @@ class MaquinasController < ApplicationController
     @maquina = Maquina.new  
   end
 
+  def editar
+    @maquina = Maquina.find(params[:id])
+  end
+
+
   def crear
     @maquina = Maquina.new(maquina_params)
  
@@ -14,6 +19,16 @@ class MaquinasController < ApplicationController
       redirect_to @maquina
     else
       render 'new'
+    end
+  end
+
+  def update
+    @maquina = Maquina.find(params[:id])
+ 
+    if @maquina.update(maquina_params)
+      redirect_to @maquina
+    else
+      render 'editar'
     end
   end
 
