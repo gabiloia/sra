@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :maquinas
 
   get 'wellcome/index'
 
@@ -7,14 +8,24 @@ Rails.application.routes.draw do
   get '/clientes/nuevo' => 'clientes#nuevo' 
   post '/clientes' => 'clientes#crear'
   get '/clientes/:id' => 'clientes#show', as: :cliente
+
+
+
+## Routes de maquinas hecho a mano
+## descartado 
   
-  get '/maquinas' => 'maquinas#index'
-  get '/maquinas/new' => 'maquinas#new'
-  post '/maquinas' => 'maquinas#crear'
-  get '/maquinas/:id/editar' => 'maquinas#editar', as: :editar_maquina
-  patch '/maquinas/:id' => 'maquinas#update'
-  get '/maquinas/:id' => 'maquinas#show', as: :maquina
+#  get '/maquinas' => 'maquinas#index'
+#  get '/maquinas/new' => 'maquinas#new'
+#  post '/maquinas' => 'maquinas#crear'
+#  get '/maquinas/:id/editar' => 'maquinas#editar', as: :editar_maquina
+#  patch '/maquinas/:id' => 'maquinas#update'
+#  get '/maquinas/:id' => 'maquinas#show', as: :maquina
+#  delete '/maquinas/:id' => 'maquinas#destroy' 
+
+
   # The priority is based upon order of creation: first created -> highest priority.
+
+
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

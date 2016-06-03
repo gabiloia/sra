@@ -1,9 +1,10 @@
-<p>maquinas</p>
+<h1>maquinas</h1>
 <% @maquinas.each do |maquina| %>
 <div>
   <p>num_serie: <%= maquina.num_serie %></p>
   <%= link_to "Detalles", maquina_path(maquina) %>
-  <%= link_to "Editar", editar_maquina_path(maquina) %>
+  <%= link_to "Editar", edit_maquina_url(maquina) %>
+  <%= link_to 'Borrar', maquina_path(maquina), method: :delete, data: { confirm: '¿Está seguro?' } %>
   <p>---------------------------</p>
 </div>
 <% end %>

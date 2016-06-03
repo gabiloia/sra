@@ -7,12 +7,11 @@ class MaquinasController < ApplicationController
     @maquina = Maquina.new  
   end
 
-  def editar
+  def edit
     @maquina = Maquina.find(params[:id])
   end
 
-
-  def crear
+  def create
     @maquina = Maquina.new(maquina_params)
  
     if @maquina.save
@@ -28,7 +27,7 @@ class MaquinasController < ApplicationController
     if @maquina.update(maquina_params)
       redirect_to @maquina
     else
-      render 'editar'
+      render 'edit'
     end
   end
 
@@ -36,6 +35,13 @@ class MaquinasController < ApplicationController
     @maquina = Maquina.find(params[:id])
   end
  
+  def destroy
+    @maquina = Maquina.find(params[:id])
+    @maquina.destroy
+ 
+    redirect_to maquinas_path
+  end
+
   private
   def maquina_params
     params.require(:maquina).permit(:num_serie, :contador,:estado)
