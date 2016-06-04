@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   
   resources :maquinas
+  resources :clientes
 
   get 'wellcome/index'
 
-  get '/clientes' => 'clientes#index'
-  get '/clientes/nuevo' => 'clientes#nuevo' 
-  post '/clientes' => 'clientes#crear'
-  get '/clientes/:id' => 'clientes#show', as: :cliente
+
+#  get '/clientes' => 'clientes#index'
+#  get '/clientes/nuevo' => 'clientes#nuevo' 
+#  post '/clientes' => 'clientes#crear'
+#  get '/clientes/:id' => 'clientes#show', as: :cliente
 
 
 
