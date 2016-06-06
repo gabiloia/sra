@@ -4,7 +4,8 @@
 <div>
   <p>Nombre: <%= cliente.nombre %></p>
   <p><%= link_to "Detalles", cliente_path(cliente) %>
-     <%= link_to 'Editar', edit_cliente_path(cliente) %></p>
+     <%= link_to 'Editar', edit_cliente_path(cliente) %>
+     <%= link_to 'Borrar', cliente_path(cliente), method: :delete, data: { confirm: 'Are you sure?' } %></p>
   <p></p>
 </div>
 <% end %>
